@@ -27,17 +27,14 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-      style={
-        scrolled
-          ? {
-              background: "rgba(10,15,30,0.85)",
-              backdropFilter: "blur(16px)",
-              WebkitBackdropFilter: "blur(16px)",
-              borderBottom: "1px solid rgba(255,255,255,0.06)",
-            }
-          : undefined
-      }
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        background: scrolled ? "rgba(10,15,30,0.85)" : "transparent",
+        backdropFilter: scrolled ? "blur(16px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(16px)" : "none",
+        borderBottom: `1px solid ${scrolled ? "rgba(255,255,255,0.06)" : "transparent"}`,
+        transition: "background 0.3s ease, border-color 0.3s ease",
+      }}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
@@ -50,7 +47,7 @@ export default function Navbar() {
           className="text-xl font-bold text-cyan-400 tracking-wide hover:text-cyan-300 transition-colors duration-150 cursor-pointer select-none"
           aria-label="Pratik Sonigra — home"
         >
-          PS
+          Pratik Sonigra
         </a>
 
         {/* Desktop nav */}

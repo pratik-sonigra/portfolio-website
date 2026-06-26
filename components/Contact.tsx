@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import type { SVGProps } from "react";
 
 function GitHubIcon(props: SVGProps<SVGSVGElement>) {
@@ -21,6 +21,15 @@ function LinkedInIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const contactLinks = [
+  {
+    label: "Mobile",
+    value: "+91-81414 71552",
+    href: "tel:+918141471552",
+    description: "Call me",
+    accentRgb: "251,146,60",
+    accent: "#fb923c",
+    Icon: ({ className }: { className?: string }) => <Phone size={20} className={className} />,
+  },
   {
     label: "Email",
     value: "pratiksonigra98@gmail.com",
@@ -124,7 +133,7 @@ function ContactCard({
         >
           {label}
         </p>
-        <p className="text-xs text-slate-500 mt-0.5 break-all leading-snug">{value}</p>
+        <p className="text-[10px] text-slate-500 mt-0.5 leading-snug text-center break-all">{value}</p>
       </div>
     </a>
   );
@@ -191,7 +200,7 @@ export default function Contact() {
           I&apos;d love to hear from you.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
           {contactLinks.map((link) => (
             <ContactCard key={link.label} {...link} />
           ))}

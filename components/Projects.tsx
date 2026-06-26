@@ -28,12 +28,12 @@ const projects: Project[] = [
   {
     id: "envault",
     number: "01",
-    name: "envault",
+    name: "envaultx",
     tagline: "What your LLM sees, stays safe.",
     description:
-      "Middleware that detects and redacts secrets, API keys, and PII before text reaches any LLM API — replacing them with typed placeholders in an ephemeral vault.",
-    tags: ["Python", "Security", "LLM"],
-    github: "https://github.com/pratik-sonigra/envault",
+      "Python package and MCP server that intercepts LLM requests and redacts secrets, API keys, and PII — replacing them with typed placeholders in an ephemeral vault. Ships as a CLI for pipeline use and an MCP server for native AI agent integration.",
+    tags: ["MCP Server", "AI Agents", "Python", "CLI", "LLM Security"],
+    github: "https://github.com/pratik-sonigra/envaultx",
     accent: "#34d399",
     accentRgb: "52,211,153",
   },
@@ -43,12 +43,11 @@ const projects: Project[] = [
     name: "deprisker",
     tagline: "Find which files will hurt the most when they break.",
     description:
-      "Builds a directed dependency graph and scores every module by risk — centrality, dependents, circular chains. Output: terminal report + interactive HTML visualization.",
-    tags: ["Python", "CLI", "Graph Analysis"],
+      "Scores every module in your codebase by risk — centrality, dependents, circular chains. For AI workflows, acts as a context prioritizer: feed high-risk files first into your LLM so it focuses where breakage matters most.",
+    tags: ["AI Context", "Python", "CLI", "Graph Analysis", "Dev Tools"],
     github: "https://github.com/pratik-sonigra/deprisker",
     accent: "#22d3ee",
     accentRgb: "34,211,238",
-    comingSoon: true,
   },
   {
     id: "testmap",

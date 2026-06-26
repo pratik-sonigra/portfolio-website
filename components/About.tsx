@@ -97,7 +97,7 @@ export default function About() {
               Background
             </h3>
             <p className="text-slate-300 leading-relaxed text-[0.95rem]">
-              Senior Software Engineer with 7+ years of experience building scalable,
+              Software Engineer with 7+ years of experience building scalable,
               high-performance applications across enterprise software, document processing
               systems, microservice architectures, and IoT platforms.
             </p>
